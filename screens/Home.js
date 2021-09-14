@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   carousel: {
     flex: 1, 
-    alignItems: "center" 
+    alignItems: "center",
   },
 
 })

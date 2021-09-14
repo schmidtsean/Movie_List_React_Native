@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { Image, ScrollView, Text, StyleSheet, Dimensions, ActivityIndicator, View, Modal, Pressable} from 'react-native';
+import { Image, ScrollView, Text, StyleSheet, Dimensions, ActivityIndicator, View} from 'react-native';
 import {getMovie} from '../services/services';
 import dateformat from 'dateformat';
 
 const placeholderImage = require('../assets/images/placeholder.jpg');
 const height = Dimensions.get('screen').height;
-
+const dimentions = Dimensions.get('screen')
 const Detail = ({route, navigation}) => {
   const movieId = route.params.movieId;
 
@@ -32,7 +32,8 @@ const Detail = ({route, navigation}) => {
           <ScrollView>
             <Image 
               resizeMode='cover'
-              style={styles.image} 
+              style={styles.image}
+              height={dimentions.height / 1.4}  
               source={
                 movieDetail.poster_path 
                 ?   {uri: 'https://image.tmdb.org/t/p/w500/' + movieDetail.poster_path} 
@@ -84,7 +85,7 @@ const styles = StyleSheet.create ({
   },
 
   image: {
-    height: height / 2,
+    height: dimentions.height / 1.5 
     
   },
   movietitle: {
