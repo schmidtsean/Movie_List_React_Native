@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: 'black',
-    paddingBottom: 20
+    padding: 10,
+    paddingBottom: 15,
+    
   },
   list: {
     marginTop: 25,

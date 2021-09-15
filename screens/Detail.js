@@ -109,6 +109,7 @@ const styles = StyleSheet.create ({
 
   release: {
     fontWeight: 'bold',
+    paddingBottom: 20,
   },
 
   vote: {

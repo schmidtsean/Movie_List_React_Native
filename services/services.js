@@ -15,9 +15,9 @@ export const getUpcomingMovies = async () => {
   return resp.data.results;
 };
 
-// Get Popular TV
-export const getPopularTv = async () => {
-  const resp = await axios.get(`${apiUrl}/tv/popular?api_key=${API_KEY}`);
+// Get Top Rated Movies
+export const getTopRated = async () => {
+  const resp = await axios.get(`${apiUrl}/movie/top_rated?api_key=${API_KEY}`);
   return resp.data.results;
 };
 
@@ -45,8 +45,8 @@ export const getMovie = async id => {
   return resp.data;
 };
 
-// Search for Movie or Tv Show
-export const searchMovieTv = async (query, type) => {
+// Search for Movie 
+export const searchMovie = async (query, type) => {
   const resp = await axios.get(
     `${apiUrl}/search/${type}?api_key=${API_KEY}&query=${query}`,
   );

@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
   img: {
     height: 40,
     width: 40,
-    borderRadius: 50
+    borderRadius: 50,
+    backgroundColor: 'white'
   },
 
   mainNav: {

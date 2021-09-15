@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { SafeAreaView, View, Image, TextInput, StyleSheet, TouchableOpacity, FlatList, Text } from 'react-native';
 import Card from '../components/Card';
-import { searchMovieTv } from '../services/services';
+import { searchMovie } from '../services/services';
 
 const Search = ({navigation}) => {
     const [text, onChangeText] = useState()
     const [searchResults, setSearchResults] =useState()
 
     const  onSubmit = (query) => {
-      searchMovieTv(query, 'movie').then(data => {
+      searchMovie(query, 'movie').then(data => {
         setSearchResults(data);
       })
     }
@@ -22,7 +22,7 @@ const Search = ({navigation}) => {
             
             <TextInput
               style={styles.input}
-              placeholder= {'Search for Movie or Show'}
+              placeholder= {'Search for Movie'}
               onChangeText={onChangeText}
               value={text}
             />
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
 
   container: {
     padding: 10,
-    paddingTop: 50,
+    paddingTop: 10,
     flexDirection: 'row',
     alignItems: 'center',
   },
